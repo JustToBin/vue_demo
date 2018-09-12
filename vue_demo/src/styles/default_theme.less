@@ -1,0 +1,106 @@
+@import "./definitions.less";
+
+@active-color: #ff8900;
+
+.default-theme {
+  .mint-header {
+    background-color: @white;
+    color: @fc-normal;
+  
+    .mint-header-button.is-left {
+      color: #44a1ff;
+    }
+  }
+  
+  .mint-navbar {
+  
+    .mint-tab-item.is-selected {
+      box-sizing: border-box;
+      border-bottom: 3px solid @active-color;
+      color: @active-color;
+      margin-bottom: 0;
+    }
+  
+    .mint-tab-item {
+      padding: 7px 0;
+      font-size: 15px;
+    }
+  }
+  
+  .tab-btn-group {
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0;
+  
+    .mint-button {
+      border: 0;
+      border-radius: 5px;
+    }
+  
+    .mint-button--primary {
+      background-color: #000;
+    }
+  
+    .mint-button--small {
+      display: inline-block;
+      font-size: 14px;
+      padding: 0 8px;
+      height: 30px;
+    }
+  }
+  
+  .vux-header {
+    background-color: @white;
+    .vux-header-title {
+      color: #000;
+    }
+    .vux-header-left, .vux-header-right {
+      color: #368ae5;
+      .vux-x-icon {
+        color: #368ae5 !important;
+        fill: #368ae5 !important;
+      }
+
+      a {
+        color: #368ae5 !important;
+      }
+    }
+  }
+  
+  .vux-button-group {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    & > a {
+      text-decoration: none;
+
+      &.vux-button-tab-item-first {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        &::after {
+          color: #000;
+          border: none;
+        }
+      }
+
+      &.vux-button-tab-item-last {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &::after {
+          border: none;
+        }
+      }
+
+      &.vux-button-group-current {
+        color: #FFF;
+        background: #000;
+        border: none;
+      }
+    }
+  }
+}

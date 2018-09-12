@@ -1,0 +1,41 @@
+
+@c-main: #409EFF;
+@c-success: #67C23A;
+@c-warning: #EB9E05;
+@c-danger: #FA5555;
+@c-info: #878D99;
+
+@c-block-border: #B4BCCC;
+
+@fc-important: #2D2F33;
+@fc-normal: #5A5E66;
+@fc-sub: #878D99;
+@fc-placeholder: #B4BCCC;
+
+@fc-page-title: #333;
+
+@bc-main: #e7ebea;
+@bc-1: #D8DCE5;
+@bc-2: #DFE4ED;
+@bc-3: #E6EBF5;
+@bc-4: #EDF2FC;
+
+@white: #fff;
+
+@header-height: 60px;
+
+.gradient-horizon (@beginColor, @endColor) {
+    filter: ~"alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=150,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=@{beginColor},endcolorstr=@{endColor},gradientType=0)";
+    -ms-filter: ~"alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=150,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=@{beginColor},endcolorstr=@{endColor},gradientType=0)";
+    //IE8
+    background: @beginColor;
+    //一些不支持背景渐变的浏览器
+    background: ~"-moz-linear-gradient(left, @{beginColor} 0%, @{endColor} 100%)";
+    background: ~"-webkit-linear-gradient(left, @{beginColor} 0%, @{endColor} 100%)";
+    background: ~"-o-linear-gradient(left, @{beginColor} 0%, @{endColor} 100%)";
+    background: ~"linear-gradient(to right, @{beginColor} 0%, @{endColor} 100%)";
+}
+
+
+@page-title-height: 40px;
+@subpage-tab-height: 29px;

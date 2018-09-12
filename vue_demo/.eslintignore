@@ -1,0 +1,7 @@
+/build/
+/config/
+/dist/
+/*.js
+/src/services/Logger.js
+/src/store/index.js
+index.js
